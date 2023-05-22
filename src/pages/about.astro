@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 const pageTitle = "About me";
 const identity = {
   firstName: "Michael",
@@ -25,7 +26,7 @@ const goal = 3;
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-    <h1 class="text-blue-400 text-4xl">{pageTitle}</h1>
+    <h1 class="text-purple-500 text-6xl">{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
     <p>
@@ -54,7 +55,11 @@ const goal = 3;
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {
+        skills.map((skill) => (
+          <li class="text-blue-700 font-bold uppercase">{skill}</li>
+        ))
+      }
     </ul>
     {happy && <p>I am happy to be learning Astro!</p>}
     {finished && <p>I finished this tutorial!</p>}
